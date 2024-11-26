@@ -58,6 +58,13 @@ L'esquema bàsic d'operacions a realitzar per treballar amb bases de dades és e
 
 ## Exemple de connexió a base de dades amb una única taula
 
+### Creació de BBDD en WSL 
+
+Crea una màquina d'wsl amb 
+```bash
+wsl --install -d Ubuntu
+```
+
 ### Creació de la base de dades
 
 Anem a crear una base de dades, un usuari per accedir-hi des de la nostra aplicació i li assignarem els permisos necessaris.
