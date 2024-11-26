@@ -64,6 +64,34 @@ Crea una màquina d'wsl amb
 ```bash
 wsl --install -d Ubuntu
 ```
+Si es el primer com et demanarà posar un usuari i un pasword 
+
+Instal·laràs el mysql-server 
+
+```bash
+$ sudo apt update
+$ sudo apt install -y mysql-server
+```
+
+Per accedir a mysql per primer cop 
+
+```bash
+$ sudo mysql -u root -p
+```
+
+No demanarà password
+
+Ara bé quan creeis usuaris i donguis permisos per accedir a les taules has de mirar amb quina ip està enllaçat el wsl amb el teu windows per tant desde PowerShell mira quina ip esta fent servir per la "xarxa interna amb wsl"
+
+```bash
+ipconfig
+```
+
+També hauràs de revisar al wsl quina ip se li està assignant ja que quan haguem d'escriure el codi li haurem de dir a quina màquina està la nostra BBDD 
+
+```bash
+ip a
+```
 
 ### Creació de la base de dades
 
