@@ -71,6 +71,16 @@ Instal·laràs el mysql-server
 ```bash
 $ sudo apt update
 $ sudo apt install -y mysql-server
+$sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+$ sudo service mysql start
+```
+
+Buscar on posa bind-address = 127.0.0.1
+
+Modificar per **bind-address = 0.0.0.0**
+
+```bash
+$ sudo service mysql reload
 ```
 
 Per accedir a mysql per primer cop 
@@ -100,6 +110,8 @@ Anem a crear una base de dades, un usuari per accedir-hi des de la nostra aplica
 Després, haurem de crear una taula amb l'estructura adequada a la informació a desar i inserirem dades de prova.
 
 Convé desar i tenir actualitzar un scrip sql que contingui totes les ordres per realitzar les accions anteriorment descrites, de manera que es pugui suprimir la base de dades (o la taula o les dades) i recuperar-la a l'estat inicial en qualsevol moment. El següent script és el que es requereix per a construir la base de dades de l'exemple:
+
+SI ESTAS FENT SERVIR WSL HAURAS DE CREAR L'USUARI TENINT EN COMPTE QUE HI HA CONEXIONS EXTERNES: **Substitueix localhost per % o la IP del client**
 
 ```sql
 -- Create user for local access.
