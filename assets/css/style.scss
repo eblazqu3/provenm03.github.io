@@ -60,3 +60,82 @@
         .card-gradient p {
             color: rgba(255,255,255,0.9);
         }
+
+ .header-style3 {
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            padding: 4rem 2rem;
+            position: relative;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .header-style3::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            100% { transform: translate(-30px, -30px) rotate(360deg); }
+        }
+
+        .header-style3 .inner {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header-style3 #project_title {
+            font-size: 4rem;
+            font-weight: 900;
+            margin: 0 0 1rem 0;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 4px 8px rgba(0,0,0,0.3); }
+            to { text-shadow: 0 4px 20px rgba(255,255,255,0.3); }
+        }
+
+        .header-style3 #project_tagline {
+            font-size: 1.4rem;
+            font-weight: 300;
+            margin: 0;
+            opacity: 0.95;
+            letter-spacing: 1px;
+        }
+
+        .header-style3 #forkme_banner {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(15px);
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            border: 2px solid rgba(255,255,255,0.3);
+            font-weight: 600;
+            transition: all 0.4s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .header-style3 #forkme_banner:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
