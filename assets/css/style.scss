@@ -150,5 +150,18 @@
   padding: 0;
   border: none;
   vertical-align: top;
+  height: 100px; /* Forzamos altura fija para la demostración */
+  position: relative; /* Esto ayuda si se usa absolute luego */
 }
 
+.cards-table a {
+  display: flex;            /* También puede ser block, pero flex ayuda a centrar */
+  align-items: center;      /* Alineación vertical */
+  justify-content: center;  /* Alineación horizontal */
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  text-decoration: none;
+  background-color: #f0f0f0; /* Para que se vea el área */
+}
