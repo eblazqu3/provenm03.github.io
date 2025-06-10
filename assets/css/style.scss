@@ -20,11 +20,11 @@
             transition: all 0.3s ease;
             border: 2px solid transparent;
             margin-top: 10px;
-            
+            font-weight: bold;
         }
 
         .card-link:hover {
-            transform: translateY(-8px);
+            
             box-shadow: 0 12px 25px rgba(0,0,0,0.15);
             border-color: #667eea;
         }
@@ -50,7 +50,7 @@
 
         .card-gradient:hover {
             background: linear-gradient(135deg, #0984e3 0%, #74b9ff 100%);
-            transform: translateY(-8px) scale(1.02);
+            
         }
 
         .card-gradient h3 {
