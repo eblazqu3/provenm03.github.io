@@ -139,3 +139,16 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
+.cards-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 1rem;
+  border: none;
+}
+
+.cards-table td {
+  padding: 0;
+  border: none;
+  vertical-align: top;
+}
+
