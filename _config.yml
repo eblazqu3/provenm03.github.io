@@ -4,3 +4,10 @@ remote_theme: pages-themes/slate@v0.2.0
 title: José Moreno - Apunts
 description: Materials docents per a cicles formatius d'Informàtica
 show_downloads: false
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  parse_block_html: true
