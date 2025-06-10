@@ -2,3 +2,53 @@
 ---
 
 @import "{{ site.theme }}";
+
+.card-link {
+            display: block;
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .card-link:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+            border-color: #667eea;
+        }
+
+        .card-link h3 {
+            margin: 0 0 0.5rem 0;
+            color: #2c3e50;
+            font-size: 1.3rem;
+        }
+
+        .card-link p {
+            margin: 0;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Estilo Card con Gradiente */
+        .card-gradient {
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+            color: white;
+            border: none;
+        }
+
+        .card-gradient:hover {
+            background: linear-gradient(135deg, #0984e3 0%, #74b9ff 100%);
+            transform: translateY(-8px) scale(1.02);
+        }
+
+        .card-gradient h3 {
+            color: white;
+        }
+
+        .card-gradient p {
+            color: rgba(255,255,255,0.9);
+        }
