@@ -6,12 +6,16 @@ Obrim el powrshell a la nostra màquina i instal·lem scoop
 
 ``` sh
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
 Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 ```
 Una vegada instal·lat scoop instal·lem el vscode: 
 
 ``` sh 
+scoop install git
+
 scoop bucket add extras
+
 scoop install extras/vscode
 ```
 ## Configurar Vscode per poder fes servir java 
