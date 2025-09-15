@@ -1,3 +1,3 @@
 ## Desplegament d'aplicacions WEB
 
-[Control de versions](git/introduccio.md){:.card-link .card-gradient}
+[Control de versions](git/index.md){:.card-link .card-gradient}
