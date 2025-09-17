@@ -20,7 +20,7 @@
 }
 
 /* Palabras clave */
-.highlight .k, .highlight .kd, .highlight .kn {
+.highlight .k, .highlight .kd, .highlight .kn, .highlight .nt {
   color: #c587d6;
   font-weight: 500;
 }
