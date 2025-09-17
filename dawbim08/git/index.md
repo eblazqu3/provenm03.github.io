@@ -4,3 +4,4 @@
 [Repositòris](repositoris.md){:.card-link .card-gradient}
 [Branques](branques.md){:.card-link .card-gradient}
 [Log i Diff](log-diff.md){:.card-link .card-gradient}
+[Conflictes](conflicts.md){:.card-link .card-gradient}
