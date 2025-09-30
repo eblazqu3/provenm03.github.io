@@ -1,5 +1,7 @@
 ## Git log
 La comanda git log mostra l’historial dels commits fets. Permet llistar l'historial del projecte, filtrar-lo i cercar canvis específics. Mentre que git status  permet inspeccionar el directori de treball i d’taging.
+
+
 ![alt text](assets/diff/image.png)
 
 ```sh

@@ -6,8 +6,9 @@ Per tant git ens proporciona unes quantes eines per a fer-ho.
 
 ## Checkout a un commit anterior
 
-Si fem un checkout a un commit anterior, veurem que anem a un estat amb el codi com el teniem prèviament a la fase de desenvolupament on ens trobem. Allà podrem executar, correr tests, i fer comprovacions si cal. Ara bé, ens trobarem en un estat de detached HEAD. 
-![alt text](assets/reset/desfergit-1.png)
+Si fem un checkout a un commit anterior, veurem que anem a un estat amb el codi com el teniem prèviament a la fase de desenvolupament on ens trobem. Allà podrem executar, correr tests, i fer comprovacions si cal. Ara bé, ens trobarem en un estat de detached HEAD.
+
+![alt text](assets/reset/desfergit-1.PNG)
 
 ## Nova branca desde commit anterior
 
@@ -29,17 +30,17 @@ git revert HEAD
 
 Amb això podrem afegir el missatge que volem al nou commit generat i podrem comprovar que efectivament s’ha creat un nou commit amb git log
 
-![alt text](assets/reset/desfergit-2.png)
+![alt text](assets/reset/desfergit-2.PNG)
 
 ## Git reset
 
 Ens permet tornar a un estat anterior, i tenim 3 opcions –hard, –mixed i –soft 
 
-![alt text](assets/reset/desfergit-3.png)
+![alt text](assets/reset/desfergit-3.PNG)
 
 En els tres casos ens trobem en aquesta situació: 
 
-![alt text](assets/reset/desfergit-4.png)
+![alt text](assets/reset/desfergit-4.PNG)
 
 ## Git Reset Soft
 El primer dels tres tres modes es el de –soft. Això el que fa és, apuntar el HEAD a un commit anterior, desfà els canvis que s’han fet en els commits intermitjos, però posant-los en l'índex, per poder-los afegir en un nou commit si fes falta. 
