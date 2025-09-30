@@ -107,3 +107,17 @@ Si volem que els dos es trobin al mateix punt, el que haurem de fer és un git p
 ```sh
 git push origin main
 ```
+## Push de branques
+
+Per acabar heu de saber que igual que podem fer el push del main, podem fer push d’altres branques.
+```sh
+git push origin branch_name
+```
+
+Ara bé, si volem eliminar la branca en remot, és a dir que ja no estigui al github, gitlab o repositòri que estiguem fent servir  haurem de fer
+```sh
+git branch -D branch_name
+```
+```sh
+git push origin --delete branch_name
+```
