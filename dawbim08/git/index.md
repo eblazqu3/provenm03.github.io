@@ -8,6 +8,7 @@
 [Desfer a git](undoinggit.md){:.card-link .card-gradient}
 [Stash](stash.md){:.card-link .card-gradient}
 [tag](tag.md){:.card-link .card-gradient}
+[Activitat](activitats.md){:.card-link .card-gradient}
 
 Webs interessants:
 
