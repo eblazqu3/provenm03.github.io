@@ -8,3 +8,9 @@
 [Desfer a git](undoinggit.md){:.card-link .card-gradient}
 [Stash](stash.md){:.card-link .card-gradient}
 [tag](tag.md){:.card-link .card-gradient}
+
+Webs interessants:
+
+https://learngitbranching.js.org/
+
+https://antonz.org/git-by-example/
