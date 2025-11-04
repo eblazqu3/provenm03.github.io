@@ -1,7 +1,7 @@
 
 
 
-## Pas 2. Configuració IP estàtica al Servidor Ubuntu
+##  Configuració IP estàtica al Servidor Ubuntu
 
 
 Editem el següent fitxer:
@@ -31,12 +31,11 @@ sudo netplan apply
 ```
 
 
-<details>
-<summary>
 
-## Pas 3. Instal·lació del servidor web Apache
 
-</summary>
+##  Instal·lació del servidor web Apache
+
+
 
 Instal·lar els paquets del servidor web Apache:
 ```bash
@@ -57,7 +56,7 @@ apache2 -v
 Per comprovar el correcte funcionament, obrim un navegador web i anem a la url http://localhost/
 
 💡 Si necessitem navegar a una web senzilla i només comprovar que carrega la web, podem utilitzar un Alpine Linux instal·lant un navegador web de consola:
-```
+```sh
 apk update
 apk add elinks
 elinks http://localhost
@@ -83,14 +82,10 @@ apache2ctl -S
 * **conf-available**: fragments de la configuració global. Aquí estaran totes les configuracions disponibles.
 * **conf-enabled**: enllaços simbòlics dels fragments de la configuració global. Aquí estaran només les configuracions actives / habilitades.
 
-</details>
 
-<details>
-<summary>
+##  Opcional: Configuracions addicionals del servidor web Apache
 
-## Pas 4. Opcional: Configuracions addicionals del servidor web Apache
 
-</summary>
 
 ### ➡️ Canviar el port per defecte
 
@@ -169,14 +164,10 @@ Reiniciar el servei:
 ```bash
 sudo service apache2 restart
 ```
-</details>
 
-<details>
-<summary>
 
-## Pas 5. Opcional: Instal·lar PHP
+## Opcional: Instal·lar PHP
 
-</summary>
 
 Instal·lar els paquets de PHP:
 ```bash
@@ -204,14 +195,11 @@ phpinfo();
 
 Per comprovar-lo, anem al navegador web a la url http://localhost/prova.php
 
-</details>
 
-<details>
-<summary>
 
-## Pas 6. Opcional: Configurar APACHE per mostrar els errors de PHP (per desenvolupament)
+## Opcional: Configurar APACHE per mostrar els errors de PHP (per desenvolupament)
 
-</summary>
+
 
 Editar el fitxer de configuració de PHP principal.
 ```bash
@@ -228,14 +216,11 @@ Reiniciar el servei.
 ```bash
 sudo service apache2 restart
 ```
-</details>
 
-<details>
-<summary>
 
-## Pas 7. Opcional: Activar l'espai web d'usuari per APACHE (directori d'usuari public_html)
+## Opcional: Activar l'espai web d'usuari per APACHE (directori d'usuari public_html)
 
-</summary>
+
 
 Amb aquesta opció farem que cada usuari del sistema tingui la seva carpeta personal de www de Apache al seu home.
 Crearem la carpeta **public_html** a dins del home de l'usuari (podeu ficar el caràcter ~ prement la tecla Alt dreta + 4):
@@ -276,14 +261,11 @@ sudo service apache2 restart
 Es podrà accedir a les webs dels usuaris del sistema mitjançant la url http://localhost/~user/
 Provem d'accedir a la web de l'usuari alumne amb la url http://localhost/~alumne/
 
-</details>
 
-<details>
-<summary>
 
-## Pas 8. Opcional: Instal·lar BBDD MySQL
+## Opcional: Instal·lar BBDD MySQL
 
-</summary>
+
 
 Instal·lar els paquets.
 ```bash
@@ -318,14 +300,11 @@ Provem a accedir a MySQL amb l'usuari root i el nou password:
 ```bash
 sudo mysql -u root -p
 ```
-</details>
 
-<details>
-<summary>
 
-## Pas 9. Opcional: Instal·lar gestor web BBDD phpMyAdmin
+## Opcional: Instal·lar gestor web BBDD phpMyAdmin
 
-</summary>
+
 
 Instal·lar els paquets.
 ```bash
@@ -358,14 +337,10 @@ Per accedir a phpMyAdmin, obrim el navegador i anem a la url http://localhost/ph
 - Usuari: root
 - Password: el que hem ficat a XXXXX
 
-</details>
 
-<details>
-<summary>
+## Opcional: Instal·lació i configuració d'un site / espai web virtual amb APACHE
 
-## Pas 10. Opcional: Instal·lació i configuració d'un site / espai web virtual amb APACHE
 
-</summary>
 
 Per defecte, al realitzar una instal·lació d'Apache web server ens instal·la un VirtualHost amb la configuració al fitxer `/etc/apache2/sites-enabled/000-default.conf`. Ara farem VirtualHost personalitzats.
 
@@ -458,14 +433,11 @@ sudo ls -l /etc/apache2/sites-enabled/
 
 Podem comprovar el correcte funcionament del nou VirtualHost que hem creat obrint un navegador web i accedint a la url http://www.dominio.foo
 
-</details>
 
-<details>
-<summary>
 
-## Pas 11. Opcional: Permetre o denegar el llistat de fitxers
+## Opcional: Permetre o denegar el llistat de fitxers
 
-</summary>
+
 
 Editar el fitxer de configuració de l'espai web per denegar el llistat de fitxers a l'arrel del domini.
 ```bash
@@ -517,12 +489,11 @@ Crear un fitxer de configuració de directoris per denegar el llistat de fitxers
 sudo mkdir /var/www/dominio/private/
 sudo nano /var/www/dominio/private/.htaccess
 ```
-<details>
-<summary>
+
 
 ### Opció usuaris
 
-</summary>
+
 
 Configurar les següents línies al fitxer **/var/www/dominio/private/.htaccess**
 
@@ -555,14 +526,10 @@ Reiniciar el servei.
 ```bash
 sudo service apache2 restart
 ```
-</details>
 
-<details>
-<summary>
 
 ### Opció grups
 
-</summary>
 
 Configurar les següents línies al fitxer **/var/www/dominio/private/.htaccess**
 ```bash
@@ -596,15 +563,10 @@ Reiniciar el servei.
 ```bash
 sudo service apache2 restart
 ```
-</details>
-</details>
 
-<details>
-<summary>
 
-## Pas 12. Opcional: Configurar l'espai web amb connexions segures SSL/TLS (HTTPS)
+## Opcional: Configurar l'espai web amb connexions segures SSL/TLS (HTTPS)
 
-</summary>
 
 Instal·lar els paquets.
 ```bash
@@ -772,4 +734,3 @@ Comprovar el correcte funcionament.
 
 https://www.dominio.foo/
 
-</details>
