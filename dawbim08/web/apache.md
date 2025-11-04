@@ -1,10 +1,8 @@
 
-<details>
-<summary>
+
 
 ## Pas 2. Configuració IP estàtica al Servidor Ubuntu
 
-</summary>
 
 Editem el següent fitxer:
 
@@ -32,7 +30,6 @@ Apliquem la nova configuració de xarxa:
 sudo netplan apply
 ```
 
-</details>
 
 <details>
 <summary>
